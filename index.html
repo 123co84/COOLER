@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COOLER®</title>
+
+    <meta name="description" content="COOLER® — don't just look. interact.">
+    <meta name="theme-color" content="#111111">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-logo">COOLER<span>®</span></div>
+        <div class="loader-bar">
+            <div id="loaderProgress"></div>
+        </div>
+        <p>LOADING SOMETHING COOL...</p>
+    </div>
+
+
+    <!-- CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursorText">CLICK</div>
+
+
+    <!-- TOP BAR -->
+    <header>
+
+        <div class="logo" id="logo">
+            COOLER<span>®</span>
+        </div>
+
+        <div class="header-center">
+            <span id="status">ONLINE</span>
+            <span class="dot"></span>
+            <span id="clock">00:00</span>
+        </div>
+
+        <button class="random-button" id="randomBtn">
+            I'M BORED
+        </button>
+
+    </header>
+
+
+    <!-- MAIN CANVAS -->
+    <main id="canvas">
+
+
+        <!-- HUGE TITLE -->
+        <div class="hero-title draggable" data-discovery="title">
+
+            <div class="tiny-label">WELCOME TO</div>
+
+            <h1>
+                COOL<br>
+                <i>ER</i>
+            </h1>
+
+            <div class="hero-sub">
+                DON'T JUST LOOK.
+                <br>
+                <b>MESS WITH IT.</b>
+            </div>
+
+        </div>
+
+
+        <!-- FLOATING PHOTO -->
+        <div class="floating-card photo-card draggable" data-discovery="photo">
+
+            <div class="card-top">
+                <span>IMG_0047.JPG</span>
+                <span>01 / 12</span>
+            </div>
+
+            <div class="fake-photo">
+                <div class="photo-noise"></div>
+                <span>COOLER<br>CAM</span>
+            </div>
+
+            <div class="card-bottom">
+                <span>DRAG ME</span>
+                <span>↗</span>
+            </div>
+
+        </div>
+
+
+        <!-- MUSIC PLAYER -->
+        <div class="music-player draggable" data-discovery="music">
+
+            <div class="music-header">
+                <span>COOLER RADIO</span>
+                <span id="trackNumber">07</span>
+            </div>
+
+            <div class="album-art" id="albumArt">
+                <div class="art-circle"></div>
+                <div class="art-text">PLAY<br>LOUD</div>
+            </div>
+
+            <div class="song-info">
+                <div id="songTitle">NOBODY'S BUSINESS</div>
+                <small id="songArtist">COOLER RADIO</small>
+            </div>
+
+            <div class="waveform" id="waveform">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="player-controls">
+
+                <button id="prevBtn">◀</button>
+
+                <button class="play-button" id="playBtn">
+                    ▶
+                </button>
+
+                <button id="nextBtn">▶</button>
+
+            </div>
+
+            <div class="volume">
+                <span>VOL</span>
+                <input type="range" min="0" max="100" value="70" id="volume">
+            </div>
+
+        </div>
+
+
+        <!-- DISCOVERY -->
+        <div class="discovery draggable">
+
+            <div class="tiny-label">DISCOVERIES</div>
+
+            <div class="discovery-number">
+                <span id="discoveryCount">0</span>
+                <span>/ 37</span>
+            </div>
+
+            <div class="discovery-bar">
+                <div id="discoveryProgress"></div>
+            </div>
+
+            <p>THERE ARE SECRETS<br>EVERYWHERE.</p>
+
+        </div>
+
+
+        <!-- RANDOM TEXT -->
+        <div class="floating-text draggable" id="floatingText">
+            nothing serious.
+        </div>
+
+
+        <!-- NAV -->
+        <nav class="interactive-nav">
+
+            <button class="nav-item" data-page="music">
+                <span>01</span>
+                MUSIC
+            </button>
+
+            <button class="nav-item" data-page="archive">
+                <span>02</span>
+                ARCHIVE
+            </button>
+
+            <button class="nav-item" data-page="fashion">
+                <span>03</span>
+                FASHION
+            </button>
+
+            <button class="nav-item" data-page="games">
+                <span>04</span>
+                GAMES
+            </button>
+
+            <button class="nav-item secret-nav" data-page="secret">
+                <span>??</span>
+                ???
+            </button>
+
+        </nav>
+
+
+        <!-- CHAOS CONTROL -->
+        <div class="control-panel draggable">
+
+            <div class="panel-title">
+                COOLER CONTROL
+            </div>
+
+            <label>
+                CHAOS
+                <input type="range" min="0" max="100" value="20" id="chaos">
+            </label>
+
+            <label>
+                GLITCH
+                <input type="range" min="0" max="100" value="5" id="glitch">
+            </label>
+
+            <label>
+                SPEED
+                <input type="range" min="0" max="100" value="35" id="speed">
+            </label>
+
+            <button id="invertBtn">
+                INVERT WORLD
+            </button>
+
+        </div>
+
+
+        <!-- BIG INTERACTION -->
+        <button class="do-something" id="doSomething">
+            <span>DO</span>
+            <strong>SOMETHING</strong>
+            <small>↗</small>
+        </button>
+
+
+        <!-- FLOATING STICKERS -->
+        <div class="sticker sticker-1 draggable">LOL</div>
+        <div class="sticker sticker-2 draggable">★</div>
+        <div class="sticker sticker-3 draggable">2004?</div>
+        <div class="sticker sticker-4 draggable">COOL</div>
+        <div class="sticker sticker-5 draggable">!!!</div>
+
+
+        <!-- MINI CAMERA -->
+        <div class="camera draggable" id="camera">
+
+            <div class="camera-top">
+                <span>COOLER CAM</span>
+                <span>REC ●</span>
+            </div>
+
+            <div class="camera-screen">
+                <div class="camera-crosshair">+</div>
+                <div class="camera-timestamp">
+                    00:00:00
+                </div>
+            </div>
+
+            <button id="snapBtn">
+                SNAP
+            </button>
+
+        </div>
+
+
+        <!-- SECRET NUMBER -->
+        <button id="secretNumber" class="secret-number">
+            17
+        </button>
+
+
+    </main>
+
+
+    <!-- OVERLAY -->
+    <div id="overlay">
+
+        <button id="closeOverlay">×</button>
+
+        <div id="overlayContent"></div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast">
+        <span id="toastText"></span>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <span>COOLER® 2026</span>
+        <span>MADE FOR KILLING TIME</span>
+        <span id="coordinates">X: 000 Y: 000</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
